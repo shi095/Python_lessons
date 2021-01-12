@@ -14,6 +14,22 @@ finally:
     num1 = int(input('Введите первое число: '))
     num2 = int(input('Введите второе число: '))
     print(devision(num1,num2))
+
+# 2
+
+def person(name,surname,birthday,current_city,email,phone):
+    return f'Даные пользователя: {name} {surname} {birthday} {current_city} {email} {phone}'
+dict = {"name":"Иван",
+"surname":"Иванов",
+"birthday":"01/02/2012",
+"current_city":"Москва",
+"email":"s@g",
+"phone":"1234"}
+
+info = person(**dict)
+
+print(info)
+
 # 5
 
 my_list = list(map(int,input('Введите строку чисел через пробел. Для остановки введите 100: ').split()))
