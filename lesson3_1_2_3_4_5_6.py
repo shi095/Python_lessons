@@ -29,6 +29,19 @@ dict = {"name":"Иван",
 info = person(**dict)
 
 print(info)
+# 3
+
+def my_func(arg1,arg2,arg3):
+    if min(arg1,arg2,arg3):
+        return arg2 + arg3
+    elif min(arg1,arg2,arg3):
+        return arg1 + arg3
+    else:
+        return arg1 + arg2
+
+answer = my_func(1,2,3)
+
+print(answer)
 
 # 5
 
