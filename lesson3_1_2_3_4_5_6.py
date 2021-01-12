@@ -1,5 +1,19 @@
 # Не смотрю решения Урока 3, потому что хочу сама разобраться.
 # Заполняю по мере выполнения
+# 1
+def devision(num1,num2):
+    return num1/num2
+# создаем исключение, что на ноль делить нельзя
+try:
+    num1 = int(input('Введите первое число: '))
+    num2 = int(input('Введите второе число: '))
+    devision(num1,num2)
+except ZeroDivisionError as e:
+    print(e)
+finally:
+    num1 = int(input('Введите первое число: '))
+    num2 = int(input('Введите второе число: '))
+    print(devision(num1,num2))
 # 5
 
 my_list = list(map(int,input('Введите строку чисел через пробел. Для остановки введите 100: ').split()))
