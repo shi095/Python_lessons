@@ -43,6 +43,17 @@ answer = my_func(1,2,3)
 
 print(answer)
 
+# 4
+def my_func(x, y):
+    return x ** y
+
+
+arg = my_func(2, -3)
+
+print(arg)
+
+# на второй способ не хватило сил
+
 # 5
 
 my_list = list(map(int,input('Введите строку чисел через пробел. Для остановки введите 100: ').split()))
