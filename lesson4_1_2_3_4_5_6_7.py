@@ -37,3 +37,16 @@ print(list([k for k, v in Counter(l).items() if v == 1]))
 #вариант 2 с использованием генератора. Но не могу додумать как тут оставить элемент в исходном порядке
 
 print(list(set([i for i in l if l.count(i) < 2])))
+
+# 5
+
+from functools import reduce #используем модуль
+
+def reducer_func(el_prev, el): #перемножаем элементы с помощью функции
+    return el_prev*el
+
+l=[el for el in range(100,1000) if el % 2 == 0] #используем  генератор списка
+
+print(l) #лист с четными числами от 100 до 1000
+
+print(reduce(reducer_func,l)) #произведение всех элементов списка
