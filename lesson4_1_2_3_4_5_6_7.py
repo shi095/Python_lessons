@@ -78,3 +78,26 @@ for el in cycle(list):      # начинаем повторять элемент
         break
     print(el)
     count += 1
+
+# 7
+#схитрила воспользовавшись уже готовым factorial
+
+from itertools import count # модуль с фукнцией count
+from math import factorial  # модуль с функцией factorial
+
+def fact_func():
+    for el in count(1):
+        yield factorial(el)
+
+gen = fact_func()           #объект-генератор
+
+x = 0
+fact = int(input('Введите число, факториал , которого хотите посчитать '))
+for i in gen:
+    if x < fact:
+        print(i)
+        x += 1
+    else:
+        break
+
+# Урок 4 полностью готов для проверки
