@@ -14,3 +14,8 @@ def salary_func(sal_hour,hour,bonus):
     return int(sal_hour)*int(hour)+int(hour)
 
 print(salary_func(argv[1],argv[2],argv[3]))
+
+#2
+list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+list_new = [el for num,el in enumerate(list) if list[num-1]<list[num]]
+print(list_new)
