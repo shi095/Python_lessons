@@ -24,3 +24,16 @@ print(list_new)
 
 l = [el for el in range(20,241) if el % 20 == 0 or el % 21 == 0]
 print(l)
+
+#4
+
+#вариант 1 с использованием модуля и генератора
+
+from collections import Counter
+
+l = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
+
+print(list([k for k, v in Counter(l).items() if v == 1]))
+#вариант 2 с использованием генератора. Но не могу додумать как тут оставить элемент в исходном порядке
+
+print(list(set([i for i in l if l.count(i) < 2])))
