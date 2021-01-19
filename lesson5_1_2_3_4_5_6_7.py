@@ -69,3 +69,19 @@ with open("text5_4_1.txt", "w",encoding='UTF-8') as number_new:
         text5_4_1 = ' '.join(map(str, row))
         number_new.write("{}\n".format(text5_4_1))
         print(text5_4_1)
+
+# 5
+
+from io import BufferedReader, TextIOWrapper
+from decimal import Decimal
+
+with open('text5_5.txt','w') as answer_number:
+    answer_number.write('1 2 3 4 5')
+
+with open('text5_5.txt','r') as number:
+    list_num = []
+    for line in number:
+        list_num = line.split()
+    list_num  = list(map(int, list_num))
+
+print(f'Сумма чисел в text5_5.txt: {sum(list_num)}')
