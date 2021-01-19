@@ -33,3 +33,18 @@ i = 0
 while i < len(list):
     print(f'В строке {i+1} количество слов: {len(list[i].split())} ')
     i += 1
+
+# 3
+from io import BufferedReader, TextIOWrapper
+
+
+with open('text5_3.txt','r',encoding='UTF-8') as salary:
+    workers = {}
+    for line in salary:
+        key, value = line.split()
+        workers[key] = int(value)
+        if int(value) < 20000:
+            print(f'{key}: зарплата меньше 20000')
+    result = sum(workers.values())/len(workers)
+
+print(f'Средняя величина дохода сотруднкиов: {result}')
