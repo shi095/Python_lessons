@@ -73,7 +73,7 @@ with open("text5_4_1.txt", "w",encoding='UTF-8') as number_new:
 # 5
 
 from io import BufferedReader, TextIOWrapper
-from decimal import Decimal
+
 
 with open('text5_5.txt','w') as answer_number:
     answer_number.write('1 2 3 4 5')
