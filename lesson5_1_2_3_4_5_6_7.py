@@ -48,3 +48,24 @@ with open('text5_3.txt','r',encoding='UTF-8') as salary:
     result = sum(workers.values())/len(workers)
 
 print(f'Средняя величина дохода сотруднкиов: {result}')
+
+# 4
+
+from io import BufferedReader, TextIOWrapper
+
+
+with open('text5_4.txt', encoding='UTF-8') as number:
+    list = number.read().split()
+    dict_translate = {'One':'Один','Two':'Два','Three':'Три','Four':'Четыре'}
+
+    for item in list:
+        if item in dict_translate:
+            list[list.index(item)] = dict_translate[item]
+    new_list = [list[d:d+3] for d in range(0, len(list), 3)]
+
+with open("text5_4_1.txt", "w",encoding='UTF-8') as number_new:
+    text5_4_1 = 0
+    for row in new_list:
+        text5_4_1 = ' '.join(map(str, row))
+        number_new.write("{}\n".format(text5_4_1))
+        print(text5_4_1)
