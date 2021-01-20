@@ -85,3 +85,15 @@ with open('text5_5.txt','r') as number:
     list_num  = list(map(int, list_num))
 
 print(f'Сумма чисел в text5_5.txt: {sum(list_num)}')
+
+# 6
+
+from io import BufferedReader, TextIOWrapper
+
+with open("text5_6.txt", encoding='utf-8') as lessons:
+    lines = lessons.readlines()
+    subjects = {}
+    for line in lines:
+        data = line.replace('(', ' ').split()
+        subjects[data[0][:-1]] = sum(int(i) for i in data if i.isdigit())
+    print(f'Словарь: {subjects}')
