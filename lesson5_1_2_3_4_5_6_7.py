@@ -99,4 +99,31 @@ with open("text5_6.txt", encoding='utf-8') as lessons:
     print(f'Словарь: {subjects}')
 
 # 7
-Осталось сделать 7ое задание статус 25.01.21
+
+from io import BufferedReader, TextIOWrapper
+import json
+
+with open('text5_7.txt','r', encoding='UTF-8') as firm:
+    str = firm.readlines()
+    profit = {}
+    aver_profit = {}
+    result = []
+    prof = 0
+    i = 0
+    for line in str:
+        name, firm, proceeds, costs = line.split()
+        profit[name] = int(proceeds) - int(costs)
+        if profit.setdefault(name) >= 0:
+            prof = prof + profit.setdefault(name)
+            i += 1
+    if i != 0:
+        average_profit = prof / i
+        aver_profit = {'average_profit': round(average_profit)}
+    result.append(profit)
+    result.append(aver_profit)
+    print(result)
+
+with open("text5_7.json", "w") as write_f:
+    json.dump(result, write_f)
+
+# Вся ветка готова для проверки выполненного задания по уроку 5
