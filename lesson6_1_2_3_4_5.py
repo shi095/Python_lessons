@@ -1,5 +1,4 @@
 # 1
-
 from time import sleep
 # вызываем модуль для задержки
 class TrafficLight: # атрибут приватный
