@@ -127,3 +127,49 @@ print(FORD.turn_left())
 print(FORD.turn_right())
 print(FORD.show_speed())
 print(FORD.police())
+
+
+# 5
+class Stationery:
+
+    def __init__(self, title):
+        self.title = title
+
+    def draw(self):
+        return f'Запуск отрисовки'
+
+
+class Pen(Stationery):
+
+    def __init__(self, title):
+        super().__init__(title)
+
+    def draw(self):
+        return (f'{self.title} штрихует черным цветом.')
+
+
+class Pencil(Stationery):
+
+    def __init__(self, title):
+        super().__init__(title)
+
+    def draw(self):
+        return (f'{self.title} позволяет создавать тень.')
+
+
+class Handle(Stationery):
+
+    def __init__(self, title):
+        super().__init__(title)
+
+    def draw(self):
+        return (f'{self.title} выделяет акценты.')
+
+
+pen = Pen('Parker')
+pencil = Pencil('Кохинор')
+handle = Handle('Stabillo')
+
+print(pen.draw())
+print(pencil.draw())
+print(handle.draw())
