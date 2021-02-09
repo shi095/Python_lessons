@@ -23,6 +23,47 @@ print(matrix_2)
 print(matrix_3)
 print(matrix_1+matrix_2+matrix_3)
 
+# 2
+
+class Сlothing:
+    def __init__(self,size,length):
+        self.size = size
+        self.lenght = length
+
+    def consumption_coat(self):
+        c_c = round(self.size/6.5 + 0.5)
+        return c_c
+
+    def consumption_suit(self):
+        c_s = round(2*self.lenght + 0.3)
+        return c_s
+
+    @property
+    def summ_consumption(self):
+        return (f'Общий расход ткани составляет: {c_c + c_s}')
+
+class Coat(Сlothing):
+    def __init__(self, size,length):
+        super().__init__(size,length)
+
+    def __str__(self):
+        return f'Расход ткани на пальто: {round(self.size / 6.5 + 0.5)}'
+
+
+class Suit(Сlothing):
+    def __init__(self, size, length):
+         super().__init__(size, length)
+
+    def __str__(self):
+        return f'Расход ткани на костюм: {round(2*self.lenght + 0.3)}'
+
+coat = Coat(3,4)
+suit = Suit(1,2)
+print(coat)
+print(suit)
+print(coat.consumption_coat())
+print(suit.consumption_suit())
+
 # 3
 
 class Cell:
